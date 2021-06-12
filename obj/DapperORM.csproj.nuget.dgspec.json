@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KAAN\\Desktop\\Yeni klasör\\DapperExamples\\DapperORM.csproj": {}
+    "C:\\Users\\KAAN\\Documents\\GitHub\\Kagan-Saygin-DapperORM\\DapperORM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KAAN\\Desktop\\Yeni klasör\\DapperExamples\\DapperORM.csproj": {
+    "C:\\Users\\KAAN\\Documents\\GitHub\\Kagan-Saygin-DapperORM\\DapperORM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KAAN\\Desktop\\Yeni klasör\\DapperExamples\\DapperORM.csproj",
+        "projectUniqueName": "C:\\Users\\KAAN\\Documents\\GitHub\\Kagan-Saygin-DapperORM\\DapperORM.csproj",
         "projectName": "DapperORM",
-        "projectPath": "C:\\Users\\KAAN\\Desktop\\Yeni klasör\\DapperExamples\\DapperORM.csproj",
+        "projectPath": "C:\\Users\\KAAN\\Documents\\GitHub\\Kagan-Saygin-DapperORM\\DapperORM.csproj",
         "packagesPath": "C:\\Users\\KAAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KAAN\\Desktop\\Yeni klasör\\DapperExamples\\obj\\",
+        "outputPath": "C:\\Users\\KAAN\\Documents\\GitHub\\Kagan-Saygin-DapperORM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KAAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

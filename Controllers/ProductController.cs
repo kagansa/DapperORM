@@ -27,7 +27,7 @@ namespace DapperORM.Controllers
         {
             using (IDbConnection cnn = new SqlConnection(conn))
             {
-                string sqlSelectProducts = "SELECT ProductId, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel FROM Products";
+                string sqlSelectProducts = "SELECT * FROM Products";
                 var result = cnn.Query<Product>(sqlSelectProducts).ToList();
                 return Ok(result);
             }
@@ -39,20 +39,21 @@ namespace DapperORM.Controllers
         {
             using (IDbConnection cnn = new SqlConnection(conn))
             {
-                DynamicParameters parameter = new DynamicParameters();
-
-                //Parametrelerimizi oluşturuyoruz.
-                parameter.Add("@ProductName", product.ProductName, DbType.String);
-                parameter.Add("@QuantityPerUnit", product.QuantityPerUnit, DbType.String);
-                parameter.Add("@UnitPrice", product.UnitPrice, DbType.Decimal);
-                parameter.Add("@UnitsInStock", product.UnitsInStock, DbType.Int32);
-                parameter.Add("@UnitsOnOrder", product.UnitsOnOrder, DbType.Int32);
-                parameter.Add("@ReorderLevel", product.ReorderLevel, DbType.Int32);
-
-                string sqlAddProducts = "INSERT INTO Products (ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel) VALUES (@ProductName, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @UnitsOnOrder, @ReorderLevel);";
+                string sqlAddProducts = "INSERT INTO Products (ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued) VALUES (@ProductName,@SupplierID,@CategoryID,@QuantityPerUnit,@UnitPrice,@UnitsInStock,@UnitsOnOrder,@ReorderLevel,@Discontinued)";
 
                 //Burada sorgumuzu parametreleri ile çalıştırıyoruz.
-                var result = cnn.Query<Product>(sqlAddProducts,parameter).ToList();
+                var result = cnn.Execute(sqlAddProducts, new
+                {
+                    ProductName = product.ProductName,
+                    SupplierID = product.SupplierId,
+                    CategoryID = product.CategoryId,
+                    QuantityPerUnit = product.QuantityPerUnit,
+                    UnitPrice = product.UnitPrice,
+                    UnitsInStock = product.UnitsInStock,
+                    UnitsOnOrder = product.UnitsOnOrder,
+                    ReorderLevel = product.ReorderLevel,
+                    Discontinued = product.Discontinued
+                });
 
                 return Ok("Ürün Eklendi");
             }

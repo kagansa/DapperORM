@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kk65KvXOOrnCJkYYo9VkVWfroI2UySt/vzcecUeEg3jI3wo0KWuHZChKh2jBEa/odGq53nvwQ06ECZnPx8OoDA==",
+  "dgSpecHash": "6npQKMGuGX6WsQ4iRuFEn7c1RU3n77iF9VXnnwp6T1WL3WzZZUNkbY4EJLilUHvgQfdZYql5gFY2YzW7En/Q/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KAAN\\Desktop\\Yeni klasör\\DapperExamples\\DapperORM.csproj",
+  "projectFilePath": "C:\\Users\\KAAN\\Documents\\GitHub\\Kagan-Saygin-DapperORM\\DapperORM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KAAN\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\KAAN\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
